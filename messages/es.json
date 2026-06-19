@@ -1,0 +1,266 @@
+{
+  "nav": {
+    "services": "Servicios",
+    "projects": "Proyectos",
+    "process": "Proceso",
+    "about": "Nosotros",
+    "contact": "Contacto",
+    "cta": "Inicia tu Proyecto"
+  },
+  "hero": {
+    "badge_available": "Disponible para Nuevos Proyectos",
+    "badge_booking": "Agenda con Anticipación",
+    "headline": "Web & Soluciones de Software",
+    "tagline": "Convirtiendo Ideas en Productos Digitales",
+    "description": "Construimos landing pages modernas, sitios web corporativos, plataformas de e-commerce, aplicaciones web y soluciones digitales que ayudan a las empresas a crecer, automatizar procesos y crear mejores experiencias en línea.",
+    "cta_primary": "Inicia tu Proyecto",
+    "cta_secondary": "Ver Nuestro Trabajo",
+    "trust_items": ["Landing Pages", "Sitios Web", "E-Commerce", "Aplicaciones Web", "Automatización", "Cloud & Infraestructura"]
+  },
+  "trust": {
+    "title": "Con la confianza de empresas que buscan resultados",
+    "metrics": [
+      { "value": "20+", "label": "Proyectos digitales construidos" },
+      { "value": "2", "label": "Mercados: El Salvador y USA" },
+      { "value": "100%", "label": "Estudio listo para trabajo remoto" },
+      { "value": "SEO", "label": "Enfoque en rendimiento" }
+    ]
+  },
+  "services": {
+    "title": "Servicios Diseñados para Hacer Crecer tu Negocio",
+    "subtitle": "Cada servicio está diseñado en torno a objetivos de negocio reales — desde el primer lanzamiento hasta la plataforma digital completa.",
+    "items": [
+      {
+        "id": "landing-pages",
+        "title": "Landing Pages",
+        "price": "Desde $300",
+        "description": "Ideal para campañas, validación de servicios, generación de leads y ofertas enfocadas.",
+        "benefits": ["Diseño responsivo", "Secciones de CTA", "Formulario de contacto", "Link de WhatsApp", "Carga rápida", "Estructura orientada a conversión"],
+        "cta": "Solicitar Landing Page"
+      },
+      {
+        "id": "business-websites",
+        "title": "Sitios Web Empresariales",
+        "price": "Desde $500",
+        "description": "Presencia profesional en línea con múltiples páginas, secciones de servicios, formularios de contacto, estructura SEO y posicionamiento de marca formal.",
+        "benefits": ["Estructura multipágina", "Base SEO", "Formularios de leads", "Posicionamiento de marca", "Diseño mobile-first", "Configuración para Google"],
+        "cta": "Solicitar Sitio Web"
+      },
+      {
+        "id": "ecommerce",
+        "title": "Soluciones E-Commerce",
+        "price": "Desde $1,500",
+        "description": "Vende productos en línea, gestiona catálogos, muestra productos y prepárate para pagos en línea.",
+        "benefits": ["Catálogo de productos", "Configuración de tienda", "Flujo de checkout", "Estructura de inventario", "Integración de pagos", "Comercio móvil"],
+        "cta": "Solicitar E-Commerce"
+      },
+      {
+        "id": "web-apps",
+        "title": "Aplicaciones Web",
+        "price": "Cotización Personalizada",
+        "description": "Plataformas, herramientas internas, dashboards, portales de clientes, sistemas de reservas y productos con lógica personalizada.",
+        "benefits": ["Dashboards a medida", "Autenticación", "Integración de bases de datos", "Paneles admin", "Desarrollo de APIs", "Arquitectura escalable"],
+        "cta": "Solicitar App Web"
+      },
+      {
+        "id": "automation",
+        "title": "Automatización & Integraciones",
+        "price": "Cotización Personalizada",
+        "description": "Automatiza formularios, Google Sheets, notificaciones por email, flujos de trabajo, CRMs o procesos internos.",
+        "benefits": ["Sincronización Google Sheets", "Automatización de email", "Flujos CRM", "Automatización de formularios", "Integraciones API", "Flujos con IA"],
+        "cta": "Solicitar Automatización"
+      }
+    ]
+  },
+  "why": {
+    "title": "Por Qué las Empresas Eligen CM Studio",
+    "subtitle": "Combinamos calidad creativa con profundidad técnica para entregar productos digitales que realmente funcionan para tu negocio.",
+    "items": [
+      { "icon": "target", "title": "Soluciones a Medida", "description": "Cada proyecto se diseña en torno a los objetivos reales del cliente, no en plantillas genéricas." },
+      { "icon": "search", "title": "SEO Optimizado", "description": "Construido con visibilidad en buscadores, estructura, metadatos y rendimiento desde el primer día." },
+      { "icon": "smartphone", "title": "Mobile First", "description": "Diseñado para verse y funcionar perfectamente en móvil, tablet y escritorio — sin excepciones." },
+      { "icon": "zap", "title": "Alto Rendimiento", "description": "Carga rápida, activos optimizados, estructura limpia y Core Web Vitals siempre en mente." },
+      { "icon": "message-circle", "title": "Comunicación Directa", "description": "Proceso claro, retroalimentación organizada y comunicación directa desde la estrategia hasta el lanzamiento." },
+      { "icon": "layers", "title": "Arquitectura Escalable", "description": "Soluciones diseñadas para evolucionar desde landing pages hasta plataformas completas y aplicaciones." }
+    ]
+  },
+  "projects": {
+    "title": "Trabajo Seleccionado que Resuelve Problemas Reales",
+    "subtitle": "Una selección curada de productos digitales construidos para resolver desafíos reales.",
+    "filters": ["Todos", "Landing Pages", "Sitios Web", "E-Commerce", "Aplicaciones Web", "Automatización"],
+    "view_case": "Explorar Proyecto",
+    "live_demo": "Ver Código",
+    "demo_soon": "Código Próximamente",
+    "request_similar": "Solicitar Proyecto Similar",
+    "items": [
+      {
+        "id": "cafe-kosoalt",
+        "title": "Landing Page Café Kosoalt",
+        "category": "Landing Pages",
+        "tags": ["Landing Page", "Pedidos por WhatsApp", "Marca de Café", "Automatización de Formulario"],
+        "description": "Landing page premium para una marca de café salvadoreño, enfocada en presentación de producto, selección de sabores, pedidos por WhatsApp y comunicación de envíos locales e internacionales.",
+        "live": true,
+        "live_url": "https://github.com/montalvo21/cafe-kosoalt-landing",
+        "details": {
+          "goal": "Crear una landing page moderna que presente Café Kosoalt como una marca de café salvadoreño premium y facilite pedidos por WhatsApp.",
+          "problem": "La marca necesitaba una presencia digital clara para mostrar sabores, presentaciones, información de envíos y recopilar detalles del pedido sin implementar una tienda en línea compleja.",
+          "solution": "Se construyó una landing page responsive con identidad visual inspirada en café, tarjetas de sabores, presentaciones de producto, sección de envíos y formulario de pedido con mensaje prellenado para WhatsApp.",
+          "features": ["Hero de marca cafetera", "Galería de sabores", "Tarjetas de precios", "Información de envíos DHL", "Formulario de pedido por WhatsApp", "Diseño responsive"],
+          "technologies": ["HTML", "CSS", "JavaScript", "Google Sheets API", "Framer Motion"],
+          "impact": "Una experiencia de pedido más profesional que ayuda a la marca a presentar sus productos y guiar al cliente directamente a WhatsApp para confirmar la compra."
+        }
+      },
+      {
+        "id": "lele-creative",
+        "title": "Lele Creative Studio",
+        "category": "Sitios Web",
+        "tags": ["Sitios Web", "Creativo", "Portafolio"],
+        "description": "Sitio web portfolio para un estudio de diseño gráfico y branding, enfocado en mostrar trabajo visual, servicios, proyectos y contacto.",
+        "live": true,
+        "live_url": "https://github.com/montalvo21/lele-creative-studio",
+        "details": {
+          "goal": "Crear una presencia digital creativa que atraiga nuevos clientes y muestre la identidad visual del estudio.",
+          "problem": "La cliente no tenía presencia digital y necesitaba un sitio que reflejara la calidad de su marca.",
+          "solution": "Se diseñó una landing page visualmente impactante con secciones claras para trabajo, servicios y contacto.",
+          "features": ["Hero con propuesta de valor", "Galería de portafolio", "Sección de servicios", "Formulario de contacto"],
+          "technologies": ["HTML", "CSS", "JavaScript", "Framer Motion"],
+          "impact": "Presencia profesional en línea lista para atraer clientes de diseño."
+        }
+      },
+      {
+        "id": "rm-quality",
+        "title": "R&M Quality Service",
+        "category": "Automatización",
+        "tags": ["Sitio Web", "Google Sheets", "Formularios", "Automatización"],
+        "description": "Sitio web para servicio de delivery y mensajería con formulario de solicitud que guarda información automáticamente en Google Sheets.",
+        "live": true,
+        "live_url": "https://github.com/montalvo21/rm-quality-service",
+        "details": {
+          "goal": "Digitalizar el proceso de recepción de pedidos y eliminar la entrada manual de datos.",
+          "problem": "Los pedidos llegaban por WhatsApp sin sistema de seguimiento organizado.",
+          "solution": "Se construyó un sitio web con formulario de pedidos que envía datos directamente a Google Sheets.",
+          "features": ["Formulario de solicitud", "Integración Google Sheets", "Link WhatsApp", "Lista de servicios"],
+          "technologies": ["HTML", "CSS", "JavaScript", "Google Sheets API", "Framer Motion"],
+          "impact": "Se redujo el trabajo manual y se creó un sistema centralizado de gestión de pedidos."
+        }
+      },
+      {
+        "id": "ot-data-centers",
+        "title": "OT Data Centers",
+        "category": "Sitios Web",
+        "tags": ["Sitio Web", "Infraestructura", "B2B"],
+        "description": "Concepto de sitio web profesional para empresa de fibra óptica e infraestructura de data centers en Virginia, USA.",
+        "live": true,
+        "live_url": "https://github.com/montalvo21/fiber-virginia-website",
+        "details": {
+          "goal": "Establecer una presencia B2B creíble para empresa de infraestructura en el mercado estadounidense.",
+          "problem": "Sin sitio web era difícil convertir leads de referencias y prospección.",
+          "solution": "Se diseñó un concepto de sitio web enterprise enfocado en servicios, confianza y contacto.",
+          "features": ["Páginas de servicios", "Showcase de infraestructura", "Formulario de contacto/RFQ", "Estructura SEO"],
+          "technologies": ["HTML", "CSS", "JavaScript", "Google Sheets API", "Framer Motion"],
+          "impact": "Presencia digital enterprise lista para el mercado de infraestructura en EE.UU."
+        }
+      },
+      {
+        "id": "glasswing",
+        "title": "Glasswing Volunteer Platform",
+        "category": "Aplicaciones Web",
+        "tags": ["App Web", "Dashboard", "Autenticación", "Integraciones"],
+        "description": "Plataforma de gestión de voluntarios con acceso multi-rol, autenticación, flujos de formación, manejo de documentos, coordinación por país, reportes e integraciones.",
+        "live": true,
+        "live_url": "https://github.com/montalvo21/gwproject",
+        "details": {
+          "goal": "Construir un sistema escalable de gestión de voluntarios para una ONG regional.",
+          "problem": "Los voluntarios de varios países se gestionaban por email y hojas de cálculo sin sistema unificado.",
+          "solution": "Aplicación web personalizada con roles admin/voluntario, pasos de formación, carga de documentos e integración con Google Calendar.",
+          "features": ["Autenticación multi-rol", "Módulos de formación", "Carga de documentos", "Google Calendar", "Coordinación por país", "Reportes"],
+          "technologies": ["WordPress", "PHP", "Google Calendar API", "Plugins personalizados"],
+          "impact": "Operaciones de voluntarios centralizadas en múltiples países."
+        }
+      },
+      {
+        "id": "ac-sports",
+        "title": "AC Sports Store",
+        "category": "E-Commerce",
+        "tags": ["E-Commerce", "WooCommerce", "Catálogo de Productos"],
+        "description": "Concepto de e-commerce para tienda deportiva con categorías de productos, estructura de catálogo, planificación WooCommerce y estrategia de configuración.",
+        "live": false,
+        "details": {
+          "goal": "Crear una estrategia de tienda online para retailer local de artículos deportivos.",
+          "problem": "Las ventas eran solo presenciales sin capacidad para llegar a clientes online.",
+          "solution": "Se diseñó un concepto e-commerce con catálogo de productos, estructura de categorías y planificación del flujo de checkout.",
+          "features": ["Catálogo de productos", "Estructura de categorías", "Flujo de checkout", "Planificación de inventario"],
+          "technologies": ["WooCommerce", "WordPress", "Tailwind CSS"],
+          "impact": "Hoja de ruta para canal de ventas digital con fases de implementación claras."
+        }
+      }
+    ]
+  },
+  "process": {
+    "title": "Un Proceso Claro de la Idea al Lanzamiento",
+    "subtitle": "Cada proyecto sigue el mismo enfoque estructurado — para que siempre sepas en qué punto estamos.",
+    "steps": [
+      { "number": "01", "title": "Descubrimiento", "description": "Entendemos tu negocio, objetivos, audiencia y necesidades del proyecto antes de escribir una sola línea de código." },
+      { "number": "02", "title": "Estrategia", "description": "Definimos alcance, estructura, funcionalidades, contenido, cronograma y prioridades para que no haya sorpresas." },
+      { "number": "03", "title": "Diseño", "description": "Creamos una experiencia de usuario moderna enfocada en claridad, confianza y conversión para tu audiencia." },
+      { "number": "04", "title": "Desarrollo", "description": "Construimos el proyecto con diseño responsivo, rendimiento, SEO y todas las funcionalidades acordadas." },
+      { "number": "05", "title": "Lanzamiento", "description": "Desplegamos, probamos, optimizamos y preparamos el proyecto para usuarios reales y motores de búsqueda." },
+      { "number": "06", "title": "Soporte", "description": "Soporte opcional, mejoras, mantenimiento y fases futuras para mantener tu producto creciendo." }
+    ]
+  },
+  "about": {
+    "title": "Detrás de CM Studio",
+    "description": "CM Studio es liderado por Carlos Montalvo, un constructor de soluciones digitales con experiencia en desarrollo web, soporte IT, negocios, marketing, infraestructura, integraciones y plataformas digitales.",
+    "bio": "Con formación en Marketing y Negocios complementada con entrenamiento técnico práctico, Carlos une la estrategia empresarial con la ejecución digital. Cada proyecto se aborda con consciencia comercial, profundidad técnica y enfoque en resultados reales para los clientes.",
+    "expertise": ["Desarrollo Web", "Soporte IT & Infraestructura", "Negocios & Marketing", "Automatización & Integraciones", "Cloud & Despliegue", "Proceso Orientado al Cliente"],
+    "founder": {
+      "name": "Carlos Montalvo",
+      "role": "Fundador / Desarrollador de Soluciones Digitales",
+      "location": "El Salvador / Remoto",
+      "badge_available": "Disponible para Nuevos Proyectos",
+      "badge_booking": "Agenda con Anticipación",
+      "cv_btn": "Descargar CV",
+      "call_btn": "Agendar Llamada de Descubrimiento"
+    }
+  },
+  "contact": {
+    "title": "Construyamos tu Próximo Producto Digital",
+    "description": "Cuéntanos sobre tu proyecto y te ayudaremos a definir la mejor solución, cronograma y próximo paso.",
+    "form": {
+      "name": "Nombre Completo",
+      "company": "Nombre de Empresa",
+      "email": "Correo Electrónico",
+      "phone": "Número de Teléfono",
+      "service": "Servicio Necesario",
+      "budget": "Rango de Presupuesto",
+      "message": "Cuéntanos sobre tu proyecto",
+      "submit": "Enviar Mensaje",
+      "submitting": "Enviando...",
+      "success": "¡Mensaje enviado! Te responderemos dentro de 24 horas.",
+      "error": "Algo salió mal. Por favor intenta de nuevo o contáctanos por WhatsApp.",
+      "service_options": [
+        "Landing Page",
+        "Sitio Web Empresarial",
+        "E-Commerce",
+        "Aplicación Web",
+        "Automatización",
+        "Cloud & Infraestructura",
+        "Otro"
+      ],
+      "budget_options": [
+        "$300 - $500",
+        "$500 - $1,500",
+        "$1,500 - $3,000",
+        "$3,000+",
+        "Aún no estoy seguro"
+      ]
+    },
+    "cta_quote": "Solicitar Cotización",
+    "cta_call": "Agendar Llamada de Descubrimiento",
+    "cta_whatsapp": "WhatsApp"
+  },
+  "footer": {
+    "tagline": "Convirtiendo Ideas en Productos Digitales",
+    "copyright": "© 2026 CM Studio. Todos los derechos reservados."
+  }
+}
