@@ -1,8 +1,10 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, Download, Calendar, Check } from 'lucide-react';
+import { MapPin, Download, Calendar, Check, X } from 'lucide-react';
 import { SectionHeader } from '@/components/shared/SectionHeader';
 import { AvailabilityBadge } from '@/components/shared/AvailabilityBadge';
 
@@ -12,6 +14,8 @@ interface AboutSectionProps {
 
 export function AboutSection({ availability }: AboutSectionProps) {
   const t = useTranslations('about');
+  const [isPhotoOpen, setIsPhotoOpen] = useState(false);
+  const profilePhotoSrc = '/images/profile/carlos-montalvo.webp';
   const expertise = t.raw('expertise') as string[];
   const founder = t.raw('founder') as {
     name: string; role: string; location: string;
@@ -64,11 +68,22 @@ export function AboutSection({ availability }: AboutSectionProps) {
             transition={{ duration: 0.6, delay: 0.1 }}
           >
             <div className="glass-card rounded-2xl p-6 space-y-5 border-gradient">
-              {/* Avatar placeholder */}
+              {/* Founder photo */}
               <div className="flex items-start gap-4">
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-accent-green/20 to-accent-blue/20 border border-border flex items-center justify-center shrink-0">
-                  <span className="font-heading font-bold text-xl text-accent-green">CM</span>
-                </div>
+                <button
+                  type="button"
+                  onClick={() => setIsPhotoOpen(true)}
+                  className="relative w-16 h-16 rounded-2xl overflow-hidden border border-border shrink-0 bg-gradient-to-br from-accent-green/20 to-accent-blue/20 focus-ring group"
+                  aria-label="Ver foto de Carlos Montalvo en grande"
+                >
+                <Image
+                  src={profilePhotoSrc}
+                  alt="Carlos Montalvo"
+                  fill
+                  sizes="64px"
+                  className="object-cover object-top transition-transform duration-300 group-hover:scale-105"
+                />
+                </button>
                 <div className="flex-1 min-w-0">
                   <h3 className="font-heading font-bold text-text-primary text-lg">{founder.name}</h3>
                   <p className="text-text-secondary text-sm">{founder.role}</p>
@@ -109,6 +124,39 @@ export function AboutSection({ availability }: AboutSectionProps) {
           </motion.div>
         </div>
       </div>
+
+      {isPhotoOpen && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-bg-primary/90 backdrop-blur-md px-4"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Foto de Carlos Montalvo"
+          onClick={() => setIsPhotoOpen(false)}
+        >
+          <button
+            type="button"
+            onClick={() => setIsPhotoOpen(false)}
+            className="absolute right-4 top-4 z-10 rounded-full border border-border bg-bg-secondary/80 p-3 text-text-primary hover:border-border-strong focus-ring"
+            aria-label="Cerrar foto"
+          >
+            <X size={20} aria-hidden="true" />
+          </button>
+
+          <div
+            className="relative h-[min(80vh,560px)] w-[min(88vw,560px)] overflow-hidden rounded-3xl border border-border shadow-2xl"
+            onClick={(event) => event.stopPropagation()}
+          >
+      <Image
+        src={profilePhotoSrc}
+        alt="Carlos Montalvo"
+        fill
+        sizes="(max-width: 768px) 88vw, 560px"
+        className="object-cover object-top"
+        priority
+      />
+          </div>
+        </div>
+      )}
     </section>
   );
 }

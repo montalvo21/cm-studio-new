@@ -21,12 +21,12 @@ export default function HomePage() {
       <Navbar />
       <main id="main-content">
         <HeroSection availability={AVAILABILITY_STATE} />
+        <AboutSection availability={AVAILABILITY_STATE} />
         <TrustBar />
         <ServicesSection />
         <WhySection />
         <ProjectsSection />
         <ProcessSection />
-        <AboutSection availability={AVAILABILITY_STATE} />
         <ContactSection />
       </main>
       <Footer />

@@ -2,6 +2,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { locales, type Locale } from '@/i18n';
+import ScrollToTop from '@/components/shared/ScrollToTop';
 import type { Metadata } from 'next';
 
 interface LocaleLayoutProps {
@@ -43,6 +44,7 @@ export default async function LocaleLayout({ children, params: { locale } }: Loc
 
   return (
     <NextIntlClientProvider messages={messages}>
+      <ScrollToTop />
       {children}
     </NextIntlClientProvider>
   );
