@@ -9,7 +9,7 @@ const NAV_LINKS = ['services', 'projects', 'process', 'about', 'contact'] as con
 const SOCIAL_LINKS = [
   { icon: Github, label: 'GitHub', href: 'https://github.com/montalvo21' },
   { icon: Linkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/in/carlos-montalvo-33a604123' },
-  { icon: Instagram, label: 'Instagram', href: 'https://instagram.com/cmstudio' },
+  { icon: Instagram, label: 'Instagram', href: 'https://www.instagram.com/cm_studio_digital?igsh=MTlmajluYXJsOTI2NQ==' },
   { icon: Mail, label: 'Email', href: 'mailto:cmont9941@gmail.com' },
 ];
 
