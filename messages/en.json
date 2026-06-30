@@ -2,8 +2,9 @@
   "nav": {
     "services": "Services",
     "projects": "Projects",
-    "process": "Process",
     "about": "About",
+    "why_cm_studio": "Why CM Studio",
+    "process": "Our Process",
     "contact": "Contact",
     "cta": "Start Your Project"
   },
@@ -20,10 +21,10 @@
   "trust": {
     "title": "Trusted by businesses that need results",
     "metrics": [
-      { "value": "20+", "label": "Digital projects built" },
-      { "value": "2", "label": "Markets: El Salvador & USA" },
+      { "value": "10+", "label": "Digital projects built" },
+      { "value": "Global Reach", "label": "Ready for remote collaboration" },
       { "value": "100%", "label": "Remote-ready studio" },
-      { "value": "SEO", "label": "Performance-first approach" }
+      { "value": "Clarity", "label": "Clear process from start to launch" }
     ]
   },
   "services": {
@@ -88,9 +89,9 @@
     "title": "Selected Work That Solves Real Business Problems",
     "subtitle": "A curated selection of digital products built to solve real challenges.",
     "filters": ["All", "Landing Pages", "Websites", "E-Commerce", "Web Applications", "Automation"],
-    "view_case": "View Case Study",
-    "live_demo": "Live Demo",
-    "demo_soon": "Demo Available Soon",
+    "view_case": "Explore Project",
+    "live_demo": "View Code",
+    "demo_soon": "Code Coming Soon",
     "request_similar": "Request Similar Project",
     "items": [
       {
@@ -168,7 +169,8 @@
         "tags": ["Web App", "Dashboard", "Authentication", "Integrations"],
         "description": "A volunteer management platform with multi-role access, authentication, training flows, document handling, country-based coordination, reporting, and integrations.",
         "live": true,
-        "live_url": "https://github.com/montalvo21/gwproject",        "details": {
+        "live_url": "https://github.com/montalvo21/gwproject",
+        "details": {
           "goal": "Build a scalable volunteer management system for a regional NGO.",
           "problem": "Volunteers across countries were managed via email and spreadsheets with no unified system.",
           "solution": "Custom WordPress-based web application with admin/volunteer roles, training steps, document uploads, and Google Calendar integration.",
@@ -211,7 +213,7 @@
     "title": "Behind CM Studio",
     "description": "CM Studio is led by Carlos Montalvo, a digital solutions builder with experience in web development, IT support, business, marketing, infrastructure, integrations, and digital platforms.",
     "bio": "With a background in Marketing and Business complemented by hands-on technical training, Carlos bridges the gap between business strategy and digital execution. Every project is approached with commercial awareness, technical depth, and a focus on real outcomes for clients.",
-    "expertise": ["Web Development", "IT Support & Infrastructure", "Business & Marketing", "Automation & Integrations", "Cloud & Deployment", "Client-Focused Process"],
+    "expertise": ["Web Development", "FullStack Developer", "IT Support & Infrastructure", "Business & Marketing", "Automation & Integrations", "Cloud & Deployment", "Client-Focused Process"],
     "founder": {
       "name": "Carlos Montalvo",
       "role": "Founder / Digital Solutions Developer",
@@ -219,7 +221,7 @@
       "badge_available": "Available for New Projects",
       "badge_booking": "Booking Ahead",
       "cv_btn": "Download CV",
-      "call_btn": "Schedule a Discovery Call"
+      "call_btn": "Book an Initial Consultation"
     }
   },
   "contact": {
@@ -255,7 +257,7 @@
       ]
     },
     "cta_quote": "Request a Quote",
-    "cta_call": "Schedule a Discovery Call",
+    "cta_call": "Book an Initial Consultation",
     "cta_whatsapp": "WhatsApp"
   },
   "footer": {

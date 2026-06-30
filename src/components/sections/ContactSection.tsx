@@ -28,10 +28,13 @@ export function ContactSection() {
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
 
   const whatsappNumber = '50376655109';
-  const discoveryCallMessage = encodeURIComponent(
-    'Hola Carlos, quiero agendar una llamada de descubrimiento para hablar sobre un proyecto digital.'
+  const discoveryCallUrl = 'https://calendar.app.google/HeVbRgtoHcdWd7YS6';
+  const whatsappQuoteMessage = encodeURIComponent(
+    locale === 'es'
+      ? 'Hola CM Studio, quiero solicitar una cotización para un proyecto digital.'
+      : "Hi CM Studio, I'd like to request a quote for a digital project."
   );
-  const discoveryCallUrl = `https://wa.me/${whatsappNumber}?text=${discoveryCallMessage}`;
+  const whatsappQuoteUrl = `https://wa.me/${whatsappNumber}?text=${whatsappQuoteMessage}`;
 
   const set = (field: keyof FormData) => (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
@@ -70,13 +73,13 @@ export function ContactSection() {
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 px-5 py-3 glass-card rounded-xl text-text-primary font-semibold text-sm hover:border-accent-green/30 hover:text-accent-green transition-all duration-200 focus-ring"
-            aria-label="Agendar llamada de descubrimiento por WhatsApp"
+            aria-label="Agendar consulta inicial en Google Calendar"
           >
             <Calendar size={15} aria-hidden="true" />
             {t('cta_call')}
           </a>
           <a
-            href="https://wa.me/50376655109?text=Hi+CM+Studio,+I'd+like+to+request+a+quote+for+a+digital+project."
+            href={whatsappQuoteUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 px-5 py-3 glass-card rounded-xl text-text-primary font-semibold text-sm hover:border-accent-green/30 hover:text-accent-green transition-all duration-200 focus-ring"

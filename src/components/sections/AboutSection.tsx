@@ -26,7 +26,7 @@ export function AboutSection({ availability }: AboutSectionProps) {
   const discoveryCallMessage = encodeURIComponent(
     'Hola Carlos, quiero agendar una llamada de descubrimiento para hablar sobre un proyecto digital.'
   );
-  const discoveryCallUrl = `https://wa.me/${whatsappNumber}?text=${discoveryCallMessage}`;
+  const discoveryCallUrl = 'https://calendar.app.google/HeVbRgtoHcdWd7YS6';
 
   return (
     <section id="about" className="section-padding bg-bg-primary">

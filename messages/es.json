@@ -1,12 +1,13 @@
 {
   "nav": {
-    "services": "Servicios",
-    "projects": "Proyectos",
-    "process": "Proceso",
-    "about": "Nosotros",
-    "contact": "Contacto",
-    "cta": "Inicia tu Proyecto"
-  },
+  "services": "Servicios",
+  "projects": "Proyectos",
+  "about": "Nosotros",
+  "why_cm_studio": "Por Qué CM Studio",
+  "process": "Nuestro Proceso",
+  "contact": "Contacto",
+  "cta": "Inicia tu Proyecto"
+},
   "hero": {
     "badge_available": "Disponible para Nuevos Proyectos",
     "badge_booking": "Agenda con Anticipación",
@@ -20,10 +21,10 @@
   "trust": {
     "title": "Con la confianza de empresas que buscan resultados",
     "metrics": [
-      { "value": "20+", "label": "Proyectos digitales construidos" },
-      { "value": "2", "label": "Mercados: El Salvador y USA" },
+      { "value": "10+", "label": "Proyectos digitales construidos" },
+      { "value": "Alcance global", "label": "Listo para colaboración remota" },
       { "value": "100%", "label": "Estudio listo para trabajo remoto" },
-      { "value": "SEO", "label": "Enfoque en rendimiento" }
+      { "value": "Claridad", "label": "Proceso claro desde el inicio hasta el lanzamiento" }
     ]
   },
   "services": {
@@ -212,7 +213,7 @@
     "title": "Detrás de CM Studio",
     "description": "CM Studio es liderado por Carlos Montalvo, un constructor de soluciones digitales con experiencia en desarrollo web, soporte IT, negocios, marketing, infraestructura, integraciones y plataformas digitales.",
     "bio": "Con formación en Marketing y Negocios complementada con entrenamiento técnico práctico, Carlos une la estrategia empresarial con la ejecución digital. Cada proyecto se aborda con consciencia comercial, profundidad técnica y enfoque en resultados reales para los clientes.",
-    "expertise": ["Desarrollo Web", "Soporte IT & Infraestructura", "Negocios & Marketing", "Automatización & Integraciones", "Cloud & Despliegue", "Proceso Orientado al Cliente"],
+    "expertise": ["Desarrollo Web", "FullStack Developer", "Soporte IT & Infraestructura", "Negocios & Marketing", "Automatización & Integraciones", "Cloud & Despliegue", "Proceso Orientado al Cliente"],
     "founder": {
       "name": "Carlos Montalvo",
       "role": "Fundador / Desarrollador de Soluciones Digitales",
@@ -220,7 +221,7 @@
       "badge_available": "Disponible para Nuevos Proyectos",
       "badge_booking": "Agenda con Anticipación",
       "cv_btn": "Descargar CV",
-      "call_btn": "Agendar Llamada de Descubrimiento"
+      "call_btn": "Agendar consulta inicial"
     }
   },
   "contact": {
@@ -256,7 +257,7 @@
       ]
     },
     "cta_quote": "Solicitar Cotización",
-    "cta_call": "Agendar Llamada de Descubrimiento",
+    "cta_call": "Agendar consulta inicial",
     "cta_whatsapp": "WhatsApp"
   },
   "footer": {

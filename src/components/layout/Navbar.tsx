@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useTranslations, useLocale } from 'next-intl';
 import { usePathname, useRouter } from 'next/navigation';
@@ -8,7 +9,11 @@ import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '@/lib/utils';
 
-const NAV_LINKS = ['services', 'projects', 'about', 'contact'] as const;
+const HOME_LINKS = ['about', 'projects', 'services'] as const;
+const PAGE_LINKS = ['why_cm_studio', 'process', 'contact'] as const;
+
+type HomeLink = (typeof HOME_LINKS)[number];
+type PageLink = (typeof PAGE_LINKS)[number];
 
 export function Navbar() {
   const t = useTranslations('nav');
@@ -17,6 +22,7 @@ export function Navbar() {
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [isLogoOpen, setIsLogoOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -33,6 +39,15 @@ export function Navbar() {
   const cleanPathname = pathname.replace(/^\/(en|es)(?=\/|$)/, '') || '/';
   const englishPath = cleanPathname === '/' ? '/en' : `/en${cleanPathname}`;
   const spanishPath = cleanPathname === '/' ? '/es' : `/es${cleanPathname}`;
+  const homePath = locale === 'es' ? '/es' : '/en';
+
+  const getHomeHref = (link: HomeLink) => `${homePath}#${link}`;
+
+  const getPageHref = (link: PageLink) => {
+    if (link === 'why_cm_studio') return `${homePath}/why-cm-studio`;
+    if (link === 'process') return `${homePath}/process`;
+    return `${homePath}#contact`;
+  };
 
   const handleLocaleChange = (targetLocale: 'es' | 'en') => {
     const targetPath = targetLocale === 'es' ? spanishPath : englishPath;
@@ -60,29 +75,52 @@ export function Navbar() {
           aria-label="Main navigation"
         >
           {/* Logo */}
-          <Link
-            href={locale === 'es' ? '/es' : '/'}
-            className="flex items-center gap-2 group focus-ring rounded-lg"
-            aria-label="CM Studio — Home"
-          >
-            <div className="w-8 h-8 rounded-lg bg-accent-green flex items-center justify-center">
-              <span className="text-bg-primary font-bold text-sm font-heading">CM</span>
-            </div>
-            <span className="font-heading font-semibold text-lg text-text-primary group-hover:text-accent-green transition-colors duration-200">
+          <div className="flex items-center gap-2">
+            <button
+              type="button"
+              onClick={() => setIsLogoOpen(true)}
+              className="relative h-10 w-16 overflow-hidden rounded-lg border border-white/10 bg-bg-secondary/40 focus-ring group"
+              aria-label="Ver logo de CM Studio en grande"
+            >
+              <Image
+                src="/images/brand/cm-studio-logo.webp"
+                alt="CM Studio logo"
+                fill
+                sizes="64px"
+                className="object-cover object-[46%_53%] transition-transform duration-300 group-hover:scale-105"
+                priority
+              />
+            </button>
+
+            <Link
+              href={homePath}
+              className="font-heading font-semibold text-lg text-text-primary hover:text-accent-green transition-colors duration-200 focus-ring rounded-lg"
+              aria-label="CM Studio — Home"
+            >
               CM Studio
-            </span>
-          </Link>
+            </Link>
+          </div>
 
           {/* Desktop nav */}
           <ul className="hidden lg:flex items-center gap-1" role="list">
-            {NAV_LINKS.map((link) => (
+            {HOME_LINKS.map((link) => (
               <li key={link}>
-                <a
-                  href={`#${link}`}
+                <Link
+                  href={getHomeHref(link)}
                   className="px-3 py-2 text-sm text-text-secondary hover:text-text-primary transition-colors duration-200 rounded-md focus-ring"
                 >
                   {t(link)}
-                </a>
+                </Link>
+              </li>
+            ))}
+            {PAGE_LINKS.map((link) => (
+              <li key={link}>
+                <Link
+                  href={getPageHref(link)}
+                  className="px-3 py-2 text-sm text-text-secondary hover:text-text-primary transition-colors duration-200 rounded-md focus-ring"
+                >
+                  {t(link)}
+                </Link>
               </li>
             ))}
           </ul>
@@ -123,12 +161,12 @@ export function Navbar() {
           {/* Right side */}
           <div className="hidden lg:flex items-center gap-4">
             {/* CTA */}
-            <a
-              href="#contact"
+            <Link
+              href={`${homePath}#contact`}
               className="px-4 py-2 bg-accent-green text-bg-primary font-semibold text-sm rounded-lg hover:bg-accent-green/90 transition-all duration-200 hover:shadow-btn-primary focus-ring"
             >
               {t('cta')}
-            </a>
+            </Link>
           </div>
 
           {/* Mobile hamburger */}
@@ -162,10 +200,10 @@ export function Navbar() {
             aria-label="Mobile navigation"
           >
             <nav className="flex flex-col p-6 gap-1">
-              {NAV_LINKS.map((link, i) => (
+              {HOME_LINKS.map((link, i) => (
                 <motion.a
                   key={link}
-                  href={`#${link}`}
+                  href={getHomeHref(link)}
                   onClick={() => setIsOpen(false)}
                   initial={{ opacity: 0, x: -12 }}
                   animate={{ opacity: 1, x: 0 }}
@@ -176,12 +214,26 @@ export function Navbar() {
                 </motion.a>
               ))}
 
+              {PAGE_LINKS.map((link, i) => (
+                <motion.a
+                  key={link}
+                  href={getPageHref(link)}
+                  onClick={() => setIsOpen(false)}
+                  initial={{ opacity: 0, x: -12 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: (HOME_LINKS.length + i) * 0.05, duration: 0.2 }}
+                  className="px-4 py-3 text-lg font-medium text-text-secondary hover:text-text-primary border-b border-border-subtle transition-colors duration-200 focus-ring rounded"
+                >
+                  {t(link)}
+                </motion.a>
+              ))}
+
               <motion.a
-                href="#contact"
+                href={`${homePath}#contact`}
                 onClick={() => setIsOpen(false)}
                 initial={{ opacity: 0, y: 8 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.35, duration: 0.2 }}
+                transition={{ delay: 0.45, duration: 0.2 }}
                 className="mt-6 px-6 py-3 bg-accent-green text-bg-primary font-bold text-center rounded-xl text-base focus-ring"
               >
                 {t('cta')}
@@ -190,6 +242,39 @@ export function Navbar() {
           </motion.div>
         )}
       </AnimatePresence>
+
+      {isLogoOpen && (
+        <div
+          className="fixed inset-0 z-[60] flex items-center justify-center bg-bg-primary/90 px-4 backdrop-blur-md"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Logo de CM Studio"
+          onClick={() => setIsLogoOpen(false)}
+        >
+          <button
+            type="button"
+            onClick={() => setIsLogoOpen(false)}
+            className="absolute right-4 top-4 z-10 rounded-full border border-border bg-bg-secondary/80 p-3 text-text-primary hover:border-border-strong focus-ring"
+            aria-label="Cerrar logo"
+          >
+            <X size={20} aria-hidden="true" />
+          </button>
+
+          <div
+            className="relative h-[min(70vh,520px)] w-[min(92vw,920px)] overflow-hidden rounded-3xl border border-border shadow-2xl"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <Image
+              src="/images/brand/cm-studio-logo.webp"
+              alt="CM Studio logo"
+              fill
+              sizes="(max-width: 768px) 92vw, 920px"
+              className="object-cover object-center"
+              priority
+            />
+          </div>
+        </div>
+      )}
     </>
   );
 }
